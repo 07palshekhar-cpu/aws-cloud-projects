@@ -10,7 +10,7 @@ Hands-on AWS portfolio projects covering architecture, deployment automation, se
 |---|---|---|---|
 | 01 | [EC2 Web Server Deployment](./01-ec2-web-server/) | EC2, Security Groups, EBS, Amazon Linux 2023, Apache, Bash | Prepared; AWS deployment pending |
 | 02 | [VPC Networking](./02-vpc-networking/) | VPC, public/private subnets, route tables, Internet Gateway, Terraform | Prepared; AWS deployment pending |
-| 03 | Highly Available Web Tier | Application Load Balancer, Auto Scaling, EC2 | Planned |
+| 03 | [ALB and Auto Scaling](./03-alb-auto-scaling/) | Application Load Balancer, target groups, launch templates, Auto Scaling, Terraform | Prepared; AWS deployment pending |
 | 04 | AWS Infrastructure with Terraform | Terraform, VPC, EC2, IAM | Planned |
 | 05 | S3 and IAM Security | S3, IAM, bucket policies | Planned |
 
@@ -25,6 +25,7 @@ Each project aims to include architecture, prerequisites, implementation steps, 
 - Restrict SSH to a trusted IP address; never expose it to the entire internet.
 - Diagrams and scripts are not proof of a successful deployment. Evidence will be added after actual testing.
 - The VPC starter does not create a NAT Gateway by default, avoiding NAT Gateway charges in the base design.
+- ALB and EC2 resources can incur charges. Project 03 is not deployed.
 
 ## About
 
