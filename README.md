@@ -1,33 +1,22 @@
 # AWS Cloud Projects
 
-Hands-on AWS portfolio projects covering architecture, deployment automation, security, verification, and troubleshooting.
+AWS portfolio projects for infrastructure, deployment automation, security, verification, and troubleshooting.
 
-> **Status:** Project documentation and starter scripts are being prepared. AWS deployments are not claimed until they have been run and verified in an active account.
+**Status:** The projects below are prepared as learning material. AWS deployments are not claimed until actually run and verified.
 
-## Projects
-
-| # | Project | Services / tools | Status |
+| # | Project | Focus | Status |
 |---|---|---|---|
-| 01 | [EC2 Web Server Deployment](./01-ec2-web-server/) | EC2, Security Groups, EBS, Amazon Linux 2023, Apache, Bash | Prepared; AWS deployment pending |
-| 02 | [VPC Networking](./02-vpc-networking/) | VPC, public/private subnets, route tables, Internet Gateway, Terraform | Prepared; AWS deployment pending |
-| 03 | [ALB and Auto Scaling](./03-alb-auto-scaling/) | Application Load Balancer, target groups, launch templates, Auto Scaling, Terraform | Prepared; AWS deployment pending |
-| 04 | AWS Infrastructure with Terraform | Terraform, VPC, EC2, IAM | Planned |
+| 01 | [EC2 Web Server](./01-ec2-web-server/) | EC2, Apache, Bash | Prepared; deployment pending |
+| 02 | [VPC Networking](./02-vpc-networking/) | VPC, subnets, routes, IGW | Prepared; deployment pending |
+| 03 | [ALB and Auto Scaling](./03-alb-auto-scaling/) | Load balancing, health checks, ASG | Prepared; deployment pending |
+| 04 | [Terraform Infrastructure](./04-terraform-infrastructure/) | Terraform, VPC, EC2, user data | Prepared; deployment pending |
 | 05 | S3 and IAM Security | S3, IAM, bucket policies | Planned |
 
-## Project standards
-
-Each project aims to include architecture, prerequisites, implementation steps, scripts or infrastructure-as-code, verification, troubleshooting, security considerations, and cleanup instructions.
-
-## Safety and cost
-
-- Never commit AWS access keys, passwords, private keys, environment files, or sensitive Terraform state.
-- Review current AWS pricing before creating resources and clean up test resources afterward.
-- Restrict SSH to a trusted IP address; never expose it to the entire internet.
-- Diagrams and scripts are not proof of a successful deployment. Evidence will be added after actual testing.
-- The VPC starter does not create a NAT Gateway by default, avoiding NAT Gateway charges in the base design.
-- ALB and EC2 resources can incur charges. Project 03 is not deployed.
-
-## About
+## Working principles
+- Review AWS pricing before launching resources.
+- Keep credentials and local Terraform state out of source control.
+- Restrict network access to what a project requires.
+- Add real screenshots and verification output only after testing.
 
 Maintained by **Shekhar Pal**, aspiring Junior Cloud Engineer / Junior DevOps Engineer.
 

@@ -1,0 +1,31 @@
+#!/bin/bash
+set -Eeuo pipefail
+exec > >(tee -a /var/log/aws-tf-demo-user-data.log | logger -t aws-tf-demo-user-data -s 2>/dev/console) 2>&1
+
+echo "[INFO] Installing Apache on Amazon Linux 2023"
+dnf install -y httpd
+
+cat > /var/www/html/index.html <<'HTML'
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>${project_name} — Terraform Demo</title>
+</head>
+<body>
+  <main>
+    <h1>${project_name}: AWS Infrastructure with Terraform</h1>
+    <p>This page is served by Apache on an Amazon EC2 instance.</p>
+    <p>Infrastructure definition: Terraform</p>
+    <p>Project status: learning environment</p>
+  </main>
+</body>
+</html>
+HTML
+
+chmod 0644 /var/www/html/index.html
+systemctl enable --now httpd
+systemctl is-active --quiet httpd
+curl --fail --silent --show-error http://localhost/ >/dev/null
+echo "[SUCCESS] Apache is active and the local HTTP check passed"

@@ -7,10 +7,15 @@
 credentials
 .aws/
 
-# Terraform state and generated files
+# Terraform state, local variables, plans, and generated files
 .terraform/
 *.tfstate
 *.tfstate.*
+terraform.tfvars
+*.tfvars
+!*.tfvars.example
+*.tfplan
+*.tfplan.*
 crash.log
 crash.*.log
 override.tf
